@@ -1,0 +1,62 @@
+ 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>for you</title>
+<style>
+body{
+    margin:0;
+    font-family:sans-serif;
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#ff6fa5;
+    color:white;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div>
+    <h2 id="text">У меня есть кое-что для тебя...</h2>
+    <button onclick="next()">нажми 👀</button>
+</div>
+
+<script>
+let step = 0;
+
+function next(){
+    step++;
+
+    if(step==1){
+        document.getElementById("text").innerText="Помнишь, как мы снова начали общаться?";
+    }
+    else if(step==2){
+        document.getElementById("text").innerText="Как будто ничего и не прошло...";
+    }
+    else if(step==3){
+        document.getElementById("text").innerText="но ты всё равно осталась в голове 🙂";
+    }
+    else if(step==4){
+        document.getElementById("text").innerText="и мне это даже нравится";
+    }
+    else if(step==5){
+        document.getElementById("text").innerText="ладно, это всё. просто улыбнись 🙂";
+    }
+}
+</script>
+
+</body>
+</html>
