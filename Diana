@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>для тебя ❤️</title>
+
+<style>
+body{
+    margin:0;
+    background: linear-gradient(135deg,#0f0f0f,#1f1f2e);
+    color:white;
+    font-family:sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.card{
+    max-width:500px;
+}
+
+.heart{
+    font-size:90px;
+    cursor:pointer;
+    user-select:none;
+    transition:0.3s;
+}
+
+.heart:hover{
+    transform:scale(1.2);
+}
+
+img{
+    width:300px;
+    border-radius:15px;
+    margin-top:20px;
+    display:none;
+    opacity:0;
+    transition:1s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h2 id="text">нажми на сердечко ❤️</h2>
+
+    <div class="heart" onclick="show()">❤️</div>
+
+    <!-- твое фото -->
+    <img id="photo" src="IMG_2985.jpeg">
+
+</div>
+
+<script>
+function show(){
+    const photo = document.getElementById("photo");
+    const text = document.getElementById("text");
+
+    photo.style.display = "block";
+    setTimeout(()=>photo.style.opacity="1",100);
+
+    text.innerText = "это для тебя 🙂";
+}
+</script>
+
+</body>
+</html>
